@@ -99,4 +99,31 @@
 .menu-title-text {
   font-size: 24px; /* Adjust size as needed */
   color: #333; /* Change color if needed */
+}
+
+.menu-footer {
+  margin-top: auto; /* Pushes footer to the bottom of the menu */
+  padding-top: 20px; /* Space above the footer links */
+  border-top: 1px solid #e0e0e0; /* Light border above the footer */
+}
+
+.menu-footer ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+.menu-footer li {
+  margin-bottom: 15px; /* Spacing between footer items */
+}
+
+.menu-footer a {
+  color: #007bff; /* Apple-like blue color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size for footer links */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.menu-footer a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
 }/*# sourceMappingURL=burger-menu.component.css.map */

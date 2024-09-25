@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';  // Import SignUpComponent
 import { LoginComponent } from './login/login.component';      // Import LoginComponent
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent  // Use LoginComponent for 'login' path
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: 'terms-of-use',
+    component: TermsOfUseComponent
   }
 ];
 
