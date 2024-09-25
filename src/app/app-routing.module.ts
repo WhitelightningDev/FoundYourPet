@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SignUpComponent } from './sign-up/sign-up.component';  // Import SignUpComponent
+import { LoginComponent } from './login/login.component';      // Import LoginComponent
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sign-up',
+    component: SignUpComponent  // Use SignUpComponent for 'sign-up' path
+  },
+  {
+    path: 'login',
+    component: LoginComponent  // Use LoginComponent for 'login' path
+  }
 ];
 
 @NgModule({

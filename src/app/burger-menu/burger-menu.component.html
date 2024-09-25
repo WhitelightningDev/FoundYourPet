@@ -1,0 +1,30 @@
+<!-- Hamburger Icon (Toggle Button) -->
+<div class="burger-menu-icon" (click)="toggleMenu()" *ngIf="!isMenuOpen">
+  <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<!-- Sidebar Menu -->
+<div [class.menu-open]="isMenuOpen" class="burger-menu">
+  <div class="menu-header">
+    <i class="fas fa-times fa-2x close-menu" (click)="toggleMenu()"></i>
+  </div>
+
+  <!-- Card-like Container for Icon and Title -->
+  <div class="menu-title-card">
+    <div class="icon-container">
+      <i class="fas fa-paw fa-2x menu-icon"></i> <!-- Font Awesome Icon -->
+    </div>
+    <h2 class="menu-title-text">Found Your Pet</h2>
+  </div>
+
+  <div class="menu-content">
+    <ul>
+      <li>
+        <a routerLink="/sign-up" (click)="toggleMenu()">Sign Up</a>
+      </li>
+      <li>
+        <a routerLink="/login" (click)="toggleMenu()">Login</a>
+      </li>
+    </ul>
+  </div>
+</div>

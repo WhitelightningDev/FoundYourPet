@@ -1,27 +1,101 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Header styles */
+.header-toolbar {
+  transition: margin-top 0.3s ease; /* Smooth transition */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.title-move-up {
+  transition: transform 0.3s ease;
+  transform: translateY(-50px); /* Adjust this value based on your design */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
 
-  margin: 0;
+.header-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
 }
 
-#container a {
-  text-decoration: none;
+.header-title-large {
+  font-size: 24px;
+  font-weight: 700;
 }
+
+/* General content background */
+.content-bg {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Carousel wrapper styling */
+.carousel-wrapper {
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  border-radius: 16px;
+}
+
+/* Main card styling */
+.card-custom {
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.title-custom {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+/* QR Image */
+.qr-image {
+  max-width: 130px;
+  border-radius: 12px;
+}
+
+/* Button styles */
+.button-custom {
+  background-color: #007aff;
+  border-color: #007aff;
+  padding: 10px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+.button-custom:hover {
+  background-color: #005ecb;
+  border-color: #005ecb;
+}
+
+/* Text muted */
+.text-muted {
+  color: #6c757d !important;
+}
+.intro-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.features-section, .how-it-works-section, .security-section {
+  padding: 50px 0;
+}
+
+.how-it-works-section .col-md-4, .features-section .col-md-6, .security-section .col-md-6 {
+  margin-bottom: 30px;
+}
+
+.cta-section {
+  background-color: #007bff;
+  padding: 60px 0;
+  color: #fff;
+}
+
+
+

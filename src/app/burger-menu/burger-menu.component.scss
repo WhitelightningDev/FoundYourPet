@@ -1,0 +1,102 @@
+.burger-menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Added transform for a hover effect */
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Off-screen by default */
+  width: 250px;
+  height: 100%;
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333; /* Dark text color */
+  padding: 20px;
+  z-index: 999;
+  transition: left 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-open {
+  left: 0; /* Slide in */
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.close-menu {
+  cursor: pointer;
+  color: #333; /* Dark color for the close icon */
+  transition: color 0.3s ease; /* Added transition for hover effect */
+}
+
+.close-menu:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.menu-content {
+  margin-top: 20px; /* Reduced space for a more compact design */
+}
+
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-content li {
+  margin-bottom: 15px; /* Reduced margin for tighter spacing */
+}
+
+.menu-content a {
+  color: #007bff; /* Apple-like blue color */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.2s ease; /* Add transform for hover effect */
+}
+
+.menu-content a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.menu-title-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px; /* Space below the card */
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  background-color: #f0f0f0; /* Light gray color */
+  border-radius: 20px; /* Perfect circle */
+  margin-right: 10px; /* Space between icon and title */
+}
+
+.menu-icon {
+  color: #333; /* Icon color */
+}
+
+.menu-title-text {
+  font-size: 24px; /* Adjust size as needed */
+  color: #333; /* Change color if needed */
+}
