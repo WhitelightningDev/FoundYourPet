@@ -71,7 +71,7 @@
   align-items: center;
   padding: 16px;
   background-color: #ffffff; /* White background for the card */
-  border-radius: 12px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   margin-bottom: 20px; /* Space below the card */
 }
@@ -127,4 +127,32 @@
 .menu-footer a:hover {
   color: #0056b3; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.signup-div{
+  text-align: center;
+  width: auto;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.304);
+}
+
+.login-div{
+  text-align: center;
+  width: auto;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.304);
+}
+
+.privacy-div{
+  text-align: center;
+  width: auto;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.304);
+}
+
+.terms-div{
+  text-align: center;
+  width: auto;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.304);
 }

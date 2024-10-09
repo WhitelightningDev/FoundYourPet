@@ -1,18 +1,23 @@
+/* General body and form styling */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #f5f5f7; /* Light gray background */
   margin: 0;
   padding: 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .signup-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
-  background-color: white; /* White background for the container */
+  background-color: hsl(0, 4%, 76%); /* White background for the container */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center; /* Centered text */
+  z-index: 1; /* Ensure form stays above the background icons */
 }
 
 h2 {
@@ -66,3 +71,53 @@ label {
 .btn:active {
   background-color: #004a9f; /* Even darker blue when pressed */
 }
+
+/* Background icons scattered */
+.background-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Icons stay behind the form */
+  pointer-events: none; /* Prevent icons from affecting form interactions */
+}
+
+.icon {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.1; /* Make icons very subtle */
+  color: #666; /* Light gray for icons */
+}
+
+/* Positioning a whole lot of scattered icons */
+.icon:nth-child(1) { top: 5%; left: 10%; }
+.icon:nth-child(2) { top: 15%; left: 40%; }
+.icon:nth-child(3) { top: 25%; left: 70%; }
+.icon:nth-child(4) { top: 35%; left: 20%; }
+.icon:nth-child(5) { top: 45%; left: 60%; }
+.icon:nth-child(6) { top: 55%; left: 30%; }
+.icon:nth-child(7) { top: 65%; left: 80%; }
+.icon:nth-child(8) { top: 75%; left: 50%; }
+.icon:nth-child(9) { top: 85%; left: 20%; }
+.icon:nth-child(10) { top: 95%; left: 70%; }
+.icon:nth-child(11) { top: 10%; left: 80%; }
+.icon:nth-child(12) { top: 20%; left: 50%; }
+.icon:nth-child(13) { top: 30%; left: 90%; }
+.icon:nth-child(14) { top: 40%; left: 40%; }
+.icon:nth-child(15) { top: 50%; left: 10%; }
+.icon:nth-child(16) { top: 60%; left: 70%; }
+.icon:nth-child(17) { top: 70%; left: 40%; }
+.icon:nth-child(18) { top: 80%; left: 20%; }
+.icon:nth-child(19) { top: 90%; left: 60%; }
+.icon:nth-child(20) { top: 5%; left: 90%; }
+.icon:nth-child(21) { top: 15%; left: 30%; }
+.icon:nth-child(22) { top: 25%; left: 10%; }
+.icon:nth-child(23) { top: 35%; left: 50%; }
+.icon:nth-child(24) { top: 45%; left: 90%; }
+.icon:nth-child(25) { top: 55%; left: 40%; }
+.icon:nth-child(26) { top: 65%; left: 10%; }
+.icon:nth-child(27) { top: 75%; left: 60%; }
+.icon:nth-child(28) { top: 85%; left: 30%; }
+.icon:nth-child(29) { top: 95%; left: 50%; }
+.icon:nth-child(30) { top: 5%; left: 70%; }
