@@ -11,48 +11,49 @@ body {
 .privacy-policy-container {
   max-width: 800px; /* Adjust width as needed */
   margin: 50px auto; /* Center the container horizontally and add space from the top */
-  padding: 20px;
+  padding: 30px; /* Increased padding for a better layout */
   background-color: white; /* White background for the container */
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center text inside the container */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  text-align: left; /* Align text to the left for readability */
   overflow-y: auto; /* Allow vertical scrolling if necessary */
   max-height: 90vh; /* Set a maximum height to keep the container within viewport */
 }
 
 /* Styling for the title */
 .privacy-policy-container h1 {
-  font-size: 36px; /* Larger font size for the title */
+  font-size: 32px; /* Slightly smaller for a cleaner look */
   color: #333; /* Dark text color */
   margin-bottom: 20px; /* Space below the title */
 }
 
 /* Styling for subsections */
 .privacy-policy-container h2 {
-  font-size: 28px; /* Size for section headings */
-  color: #333; /* Dark text color */
+  font-size: 24px; /* Size for section headings */
+  color: #007bff; /* Blue color for section headings */
   margin: 20px 0 10px; /* Margin for spacing */
+  border-bottom: 2px solid #eaeaea; /* Underline effect for section headings */
+  padding-bottom: 5px; /* Padding for bottom of heading */
 }
 
 /* Styling for paragraphs */
 .privacy-policy-container p {
-  font-size: 18px; /* Larger font size for readability */
+  font-size: 16px; /* Font size for readability */
   line-height: 1.6; /* Improved line height */
   color: #666; /* Lighter gray color for the text */
-  margin-bottom: 20px; /* Space below each paragraph */
-  text-align: left; /* Align text to the left for better readability */
+  margin-bottom: 15px; /* Space below each paragraph */
 }
 
 /* List styling */
 .privacy-policy-container ul {
   list-style-type: disc; /* Bullet points */
   padding-left: 20px; /* Indentation for list items */
-  text-align: left; /* Align text to the left for better readability */
+  color: #555; /* Darker gray for list items */
 }
 
 /* Back button styling */
 .back-button {
-  background-color: #007bff; /* Apple-like blue color */
+  background-color: #007bff; /* Primary blue color */
   color: white; /* White text for contrast */
   border: none; /* Remove default border */
   border-radius: 12px; /* Rounded corners */
@@ -60,9 +61,14 @@ body {
   font-size: 16px; /* Font size */
   cursor: pointer; /* Pointer cursor on hover */
   margin-top: 20px; /* Space above the button */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background color transition and scaling */
 }
 
 .back-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.back-button:active {
+  transform: translateY(0); /* Reset the lift effect when pressed */
 }

@@ -1,4 +1,3 @@
-<!-- Background icons -->
 <div class="background-icons">
   <i class="fas fa-paw icon"></i>
   <i class="fas fa-bone icon"></i>
@@ -6,7 +5,6 @@
   <i class="fas fa-cat icon"></i>
   <i class="fas fa-fish icon"></i>
   <i class="fas fa-feather-alt icon"></i>
-  <!-- Add more icons here up to 30 -->
   <i class="fas fa-dove icon"></i>
   <i class="fas fa-horse icon"></i>
   <i class="fas fa-hippo icon"></i>
@@ -18,23 +16,69 @@
   <i class="fas fa-otter icon"></i>
 </div>
 
-
 <div class="signup-container shadow-lg">
   <h2>Sign Up</h2>
-  <form>
+  <form (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
     <div class="form-group">
       <label for="name">Full Name</label>
-      <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+      <input type="text" id="name" class="form-control" [(ngModel)]="formData.name" name="name" required #name="ngModel" placeholder="Enter your full name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+        Full Name is required.
+      </div>
     </div>
+
+    <div class="form-group">
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" class="form-control" [(ngModel)]="formData.surname" name="surname" required #surname="ngModel" placeholder="Enter your surname">
+      <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" class="error-message">
+        Surname is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Contact</label>
+      <input type="text" id="contact" class="form-control" [(ngModel)]="formData.contact" name="contact" required #contact="ngModel" placeholder="Enter your contact">
+      <div *ngIf="contact.invalid && (contact.dirty || contact.touched)" class="error-message">
+        Contact is required.
+      </div>
+    </div>
+
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      <input type="email" id="email" class="form-control" [(ngModel)]="formData.email" name="email" required #email="ngModel" placeholder="Enter your email">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+        Email is required.
+      </div>
     </div>
+
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+      <input type="password" id="password" class="form-control" [(ngModel)]="formData.password" name="password" required #password="ngModel" placeholder="Enter your password">
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+        Password is required.
+      </div>
     </div>
+
+    <!-- Checkboxes for agreements -->
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="privacy-policy" [(ngModel)]="formData.privacyPolicy" name="privacyPolicy" required #privacyPolicy="ngModel">
+      <label for="privacy-policy">I agree to the <a href="#privacy-policy">Privacy Policy</a></label>
+      <div *ngIf="!formData.privacyPolicy && (signUpForm.submitted)" class="error-message">You must agree to the Privacy Policy.</div>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="terms-conditions" [(ngModel)]="formData.termsConditions" name="termsConditions" required #termsConditions="ngModel">
+      <label for="terms-conditions">I agree to the <a href="#terms-conditions">Terms and Conditions</a></label>
+      <div *ngIf="!formData.termsConditions && (signUpForm.submitted)" class="error-message">You must agree to the Terms and Conditions.</div>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="agreement" [(ngModel)]="formData.agreement" name="agreement" required #agreement="ngModel">
+      <label for="agreement">I confirm that I am over 18 years old and agree to the terms.</label>
+      <div *ngIf="!formData.agreement && (signUpForm.submitted)" class="error-message">You must confirm your age and agreement.</div>
+    </div>
+
     <button type="submit" class="btn btn-primary">Sign Up</button>
   </form>
-</div>
 
+</div>

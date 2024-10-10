@@ -7,6 +7,8 @@
   padding: 20px;
 }
 
+
+
 /* Animations */
 .fade-in {
   opacity: 0;
@@ -59,12 +61,22 @@
   padding: 40px;
 }
 
+
+.doggoimage{
+  z-index: -1;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
+
 .how-it-works-section {
   margin-top: 10px;
 }
 
 .features-section, .security-section {
-  background-color: rgba(116, 117, 117, 0.1);
+  background-color: #7475751a;
 }
 
 .cta-section {

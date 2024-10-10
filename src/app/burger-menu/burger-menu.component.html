@@ -1,7 +1,10 @@
 <!-- Hamburger Icon (Toggle Button) -->
-<div class="burger-menu-icon" (click)="toggleMenu()" *ngIf="!isMenuOpen">
-  <i class="fas fa-bars fa-2x"></i>
-</div>
+ <div id="Menu-nav">
+  <div class="burger-menu-icon" (click)="toggleMenu()" *ngIf="!isMenuOpen">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+ </div>
+
 
 <!-- Sidebar Menu -->
 <div [class.menu-open]="isMenuOpen" class="burger-menu">

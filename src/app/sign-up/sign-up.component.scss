@@ -4,21 +4,25 @@ body {
   background-color: #f5f5f7; /* Light gray background */
   margin: 0;
   padding: 0;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh; /* Ensure at least full height */
 }
 
+
+/* Container for the signup page */
 .signup-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: hsl(0, 4%, 76%); /* White background for the container */
+  max-width: 800px; /* Adjust width as needed */
+  margin: 50px auto; /* Center the container horizontally and add space from the top */
+  padding: 20px;
+  background-color: rgb(144, 144, 144); /* White background for the container */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Centered text */
-  z-index: 1; /* Ensure form stays above the background icons */
+  text-align: left; /* Align text to the left for better readability */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds */
+  padding-bottom: 20px; /* Add some padding at the bottom */
 }
+
+
 
 h2 {
   font-size: 24px;
@@ -89,6 +93,52 @@ label {
   opacity: 0.1; /* Make icons very subtle */
   color: #666; /* Light gray for icons */
 }
+
+
+/* Styling for checkbox group */
+.checkbox-group {
+  display: flex;
+  align-items: center; /* Center align the checkbox and label */
+  margin-bottom: 15px; /* Space below each checkbox group */
+}
+
+.checkbox-group input {
+  margin-right: 10px; /* Space between checkbox and label */
+  accent-color: #007bff; /* Change checkbox color to match the theme */
+}
+
+/* Style links within labels */
+.checkbox-group label a {
+  color: #007bff; /* Link color */
+  text-decoration: underline; /* Underline links */
+}
+
+.checkbox-group label a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1000; /* Ensure it's above other elements */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade */
+}
+
+
+
+/* Error message styles */
+.error-message {
+  color: red; /* Red color for error messages */
+  font-size: 14px; /* Font size for error messages */
+  margin-top: 5px; /* Space above error messages */
+}
+
 
 /* Positioning a whole lot of scattered icons */
 .icon:nth-child(1) { top: 5%; left: 10%; }
