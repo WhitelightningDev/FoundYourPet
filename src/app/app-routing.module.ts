@@ -4,6 +4,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';  // Import SignUp
 import { LoginComponent } from './login/login.component';      // Import LoginComponent
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './dashboard/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -30,7 +33,8 @@ const routes: Routes = [
   {
     path: 'terms-of-use',
     component: TermsOfUseComponent
-  }
+  },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
